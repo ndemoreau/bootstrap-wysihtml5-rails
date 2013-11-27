@@ -84,6 +84,13 @@
             "</li>";
         },
 
+        "upload": function(locale, options) {
+            var size = (options && options.size) ? ' btn-'+options.size : '';
+            return "<li>" +
+              "<a class='btn" + size + "' id='upload-btn' title='Upload file' tabindex='-1'><i class='icon-picture'></i></a>" +
+            "</li>";
+        },
+
         "html": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
@@ -392,6 +399,7 @@
         "html": false,
         "link": true,
         "image": true,
+        "upload": true,
         events: {},
         parserRules: {
             classes: {
@@ -509,3 +517,4 @@
     };
 
 }(window.jQuery, window.wysihtml5);
+
